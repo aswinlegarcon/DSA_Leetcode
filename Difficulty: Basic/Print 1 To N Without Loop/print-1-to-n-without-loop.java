@@ -38,15 +38,17 @@ class Main {
 // User function Template for Java
 
 class Solution {
-    int count = 1;
+    
     public void printNos(int n) {
         // Your code here
-        if(count>n)
+        //Backtracking
+        if(n<1)
         {
             return;
         }
-        System.out.print(count+" ");
-        count++;
-        printNos(n);
+        printNos(n-1);
+        System.out.print(n+" ");
+   
+        
     }
 }
