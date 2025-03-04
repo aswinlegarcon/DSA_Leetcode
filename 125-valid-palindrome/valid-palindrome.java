@@ -2,20 +2,19 @@ class Solution {
     public boolean isPalindrome(String s) {
         String result = s.replaceAll("[^A-Za-z0-9]","").toLowerCase();
         int i = 0;
-        int n = result.length()-1;
-        return helpPalindrome(result,i,n);
+        return helpPalindrome(result,i);
     }
 
-    public boolean helpPalindrome(String s,int start,int end)
+    public boolean helpPalindrome(String s,int start)
     {
-        if(start>=end)
+        if(start>=s.length()/2)
         {
             return true;
         }
-        if(s.charAt(start)!=s.charAt(end))
+        if(s.charAt(start)!=s.charAt(s.length()-start-1))
         {
             return false;
         }
-         return helpPalindrome(s,start+1,end-1);
+        return helpPalindrome(s,start+1);
     }
 }
