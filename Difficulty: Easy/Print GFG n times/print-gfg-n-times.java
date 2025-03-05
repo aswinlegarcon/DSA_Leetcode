@@ -29,8 +29,8 @@ class Solution {
         {
             return;
         }
+        printGfg(N-1);
         System.out.print("GFG ");
-        N--;
-        printGfg(N);
+        
     }
 }
