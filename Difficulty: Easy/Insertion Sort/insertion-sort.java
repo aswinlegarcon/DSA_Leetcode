@@ -44,16 +44,24 @@ class Solution {
     public void insertionSort(int arr[]) {
         // code here
         int n = arr.length;
-        for(int i=1;i<n;i++)
+        helpInsert(arr,1,n);
+    }
+    
+    public void helpInsert(int arr[],int i,int n)
+    {
+        if(i==n)
         {
-            int j = i;
-            while(j>0 && arr[j] < arr[j-1])
-            {
-                int temp = arr[j-1];
-                arr[j-1] = arr[j];
-                arr[j] = temp;
-                j--;
-            }
+            return;
         }
+        int j = i;
+        while(j>0 && arr[j] < arr[j-1])
+        {
+            int temp = arr[j-1];
+            arr[j-1] = arr[j];
+            arr[j] = temp;
+            j--;
+        }
+         helpInsert(arr,i+1,n);
+        
     }
 }
