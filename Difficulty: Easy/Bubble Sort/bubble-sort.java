@@ -14,24 +14,33 @@ class Solution {
     public static void bubbleSort(int arr[]) {
         // code here
         int n = arr.length;
-        for(int i=n-1;i>=1;i--)
+        helpBub(arr,n-1,n);
+    }
+    
+    public static void helpBub(int arr[],int i,int n)
+    {
+        if(i==0)
         {
-            boolean came = false;
-            for(int j=0;j<i;j++)
+            return;
+        }
+        boolean came = false;
+        for(int j=0;j<i;j++)
+        {
+            if(arr[j]>arr[j+1])
             {
-                if(arr[j]>arr[j+1])
-                {
-                    int temp = arr[j];
-                    arr[j] = arr[j+1];
-                    arr[j+1] = temp;
-                    came = true;
-                }
-            }
-            if(!came)
-            {
-                break;
+                int temp = arr[j];
+                arr[j] = arr[j+1];
+                arr[j+1] = temp;
+                came = true;
             }
         }
+        if(!came)
+        {
+          return;
+        }
+        
+        helpBub(arr,i-1,n);
+        
     }
 }
 
