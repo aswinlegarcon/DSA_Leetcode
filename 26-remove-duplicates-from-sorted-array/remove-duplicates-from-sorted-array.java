@@ -1,24 +1,17 @@
 class Solution {
     public int removeDuplicates(int[] nums) {
-        TreeMap<Integer,Integer> numberAndCount = new TreeMap<>();
+        TreeSet<Integer> number = new TreeSet<>();
         for(int num:nums)
         {
-            if(numberAndCount.containsKey(num))
-            {
-                numberAndCount.put(num,numberAndCount.get(num)+1);
-            }
-            else 
-            {
-                numberAndCount.put(num,1);
-            }
+           number.add(num);
         }
         int i = 0;
-        for(int key:numberAndCount.keySet())
+        for(int key:number)
         {
             nums[i] = key;
             i++;
         }
       
-        return numberAndCount.size();
+        return number.size();
     }
 }
