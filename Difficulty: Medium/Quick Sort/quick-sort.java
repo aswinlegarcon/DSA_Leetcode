@@ -33,7 +33,7 @@ class Solution {
     // Function to sort an array using quick sort algorithm.
     static void quickSort(int arr[], int low, int high) {
         // code here
-         if(low<high)
+        if(low<high)
         {
             int partition = partition(arr,low,high);
             quickSort(arr,low,partition-1);
@@ -43,17 +43,17 @@ class Solution {
 
     static int partition(int arr[], int low, int high) {
         // your code here
-        int pivot = arr[low];
+        int pivot = arr[low]; // any num can be taken as pivot element
         int i = low;
         int j = high;
+        
         while(i<j)
         {
-            while(arr[i] <= pivot && i <= high-1)
+            while(arr[i] <= pivot && i < high)
             {
                 i++;
             }
-            
-            while(arr[j] > pivot && j >= low+1)
+            while(arr[j] > pivot && j > low)
             {
                 j--;
             }
@@ -65,9 +65,9 @@ class Solution {
                 arr[j] = temp;
             }
         }
-        int temp = arr[low];
-        arr[low] = arr[j];
-        arr[j] = temp;
+        int temp = arr[j];
+        arr[j] = arr[low];
+        arr[low] = temp;
         return j;
     }
 }
