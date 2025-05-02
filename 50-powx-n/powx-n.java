@@ -2,10 +2,7 @@ class Solution {
     public double myPow(double x, int n) {
         double result = 1.0;
         long power = n;
-        if(power<0)
-        {
-            power = -1 * power; // convert negative to positive
-        }
+        power = Math.abs(power);
         while(power>0)
         {
             if(power%2==0)
