@@ -1,51 +1,26 @@
 class Solution {
-
-    public int[] getNse(int[] arr)
-    {
-        int nse[] = new int[arr.length];
-        Stack<Integer> st = new Stack<>();
-        for(int i=arr.length-1;i>=0;i--)
-        {
-            while(!st.empty() && arr[st.peek()] >= arr[i])
-            {
-                st.pop();
-            }
-
-            if(st.empty()) nse[i] = arr.length-1;
-            else nse[i] = st.peek()-1;
-            st.push(i);
-        }
-        return nse;
-    }
-
-    public int[] getPse(int[] arr)
-    {
-        int pse[] = new int[arr.length];
-        Stack<Integer> st = new Stack<>();
-        for(int i=0;i<arr.length;i++)
-        {
-            while(!st.empty() && arr[st.peek()] > arr[i])
-            {
-                st.pop();
-            }
-
-            if(st.empty()) pse[i] = 0;
-            else pse[i] = st.peek()+1;
-            st.push(i);
-        }
-        return pse;
-    }
-
-
     public int largestRectangleArea(int[] arr) {
         int max = 0;
         int n = arr.length;
-        int nse[] = getNse(arr);
-        int pse[] = getPse(arr);
+        Stack<Integer> st = new Stack<>();
         for(int i=0;i<n;i++)
         {
-            int area = arr[i] * (nse[i]-pse[i]+1);
-            max = Math.max(area,max);
+            while(!st.empty() && arr[st.peek()] > arr[i]) // we go next smaller
+            {
+                int num = st.pop();
+                int nse = i;
+                int pse = st.empty()?-1:st.peek();
+                max = Math.max(max,arr[num]*(nse-pse-1)); 
+            }
+            st.push(i);
+        }
+
+        while(!st.empty())
+        {
+            int num = st.pop();
+            int nse = n;
+            int pse = st.empty()?-1:st.peek();
+            max = Math.max(max,arr[num]*(nse-pse-1));
         }
         return max;
         
