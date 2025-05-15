@@ -8,13 +8,16 @@ class Solution {
         while(r<n)
         {
             if(nums[r]== 0) cnt0++;
-            while(k<cnt0)
+            if(k<cnt0)
             {
                 if(nums[l] == 0) cnt0--;
                 l++;
             }
+            if(cnt0<=k)
+            {
+                max = Math.max(max,r-l+1);
+            }
             
-            max = Math.max(max,r-l+1);
             r++;
         }
         return max;
