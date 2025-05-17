@@ -17,7 +17,7 @@ class Solution {
                 map.put(num,1);
             }
 
-            while(map.size()>2)
+            if(map.size()>2)
             {
                 num = fruits[l];
                 map.put(num,map.get(num)-1);
@@ -27,7 +27,10 @@ class Solution {
                 }
                 l++;
             }
-            max = Math.max(max,r-l+1);
+            if(map.size()<=2)
+            {
+                max = Math.max(max,r-l+1);
+            }
             r++;
         }
         return max;
