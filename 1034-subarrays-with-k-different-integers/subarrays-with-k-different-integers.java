@@ -29,7 +29,7 @@ class Solution {
                 }
                 l++;
             }
-            count += (r-l+1);
+            count = count + (r-l+1);
             r++;
         }
         return count;
