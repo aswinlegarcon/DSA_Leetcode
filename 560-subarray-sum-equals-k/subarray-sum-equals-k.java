@@ -12,19 +12,13 @@ class Solution {
             {
                 count = count + num.get(remove);
             }
-            else
-            {
-                num.put(remove,0);
-                count = count + num.get(remove);
-            }
             if(num.containsKey(preSum))
             {
                 num.put(preSum,num.get(preSum)+1);
             }
             else
             {
-                num.put(preSum,0);
-                num.put(preSum,num.get(preSum)+1);
+                num.put(preSum,1);
             }
        
 
