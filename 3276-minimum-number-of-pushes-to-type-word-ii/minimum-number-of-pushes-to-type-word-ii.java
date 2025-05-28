@@ -1,41 +1,19 @@
 class Solution {
     public int minimumPushes(String word) {
         
-        Map<Character,Integer> mapC = new HashMap<>();
-        int cntFor8 = 0;
+        int[] hash = new int[26];
         for(int i=0;i<word.length();i++)
         {
-            if(mapC.containsKey(word.charAt(i)))
-            {
-                mapC.put(word.charAt(i),mapC.get(word.charAt(i))+1);
-                cntFor8++;
-            }
-            else
-            {
-                mapC.put(word.charAt(i),1);
-                cntFor8++;
-            }
-
+            hash[word.charAt(i)-'a']++;
         }
-        if(mapC.size()<=8)
-        {   
-            return cntFor8;
-        }
-
-        TreeMap<Character,Integer> map = new TreeMap<>(
-            (key1, key2) -> {
-                    int comp = Integer.compare(mapC.get(key2), mapC.get(key1));
-                    if (comp == 0) {
-                        return Character.compare(key1, key2);
-                    }
-                    return comp;
-                });
-        map.putAll(mapC);
-        int toMultiply = 1;
+        Arrays.sort(hash);
         int cnt = 0;
         int min = 0;
-        for(int vals:map.values())
+        int toMultiply = 1;
+        for(int i=25;i>=0;i--)
         {
+            if(hash[i]==0) break;
+            int vals = hash[i];
             cnt++;
             if(cnt==9 || cnt==17 || cnt==25) toMultiply++;
             min += (toMultiply*vals);
