@@ -3,7 +3,9 @@ class Solution {
         Comparator<int[]> obj = new Comparator<int[]>(){
             public int compare(int[] obj1,int[] obj2)
             {
-                return Integer.compare(obj1[0],obj2[0]);
+                int diff = Integer.compare(obj1[0],obj2[0]);
+                if(diff==0) return Integer.compare(obj1[1],obj2[1]);
+                return diff;
             }
         };
         int[][] ans = new int[intervals.length][2];
