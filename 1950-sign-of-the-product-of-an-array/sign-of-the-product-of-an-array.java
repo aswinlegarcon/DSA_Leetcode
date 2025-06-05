@@ -6,7 +6,7 @@ class Solution {
             if(num==0) 
             {
                 prod = 0;
-                break;
+                return 0;
             }
             if(num>0) prod *= 1;
             else prod *= -1;
