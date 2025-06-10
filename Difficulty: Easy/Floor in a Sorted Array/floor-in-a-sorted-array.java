@@ -17,13 +17,13 @@ class Solution {
         int ans = -1;
         while(low<=high)
         {
-            int mid = (low+high) / 2;
+            int mid = (low+high)/2;
             if(arr[mid] <= x)
             {
                 ans = mid;
                 low = mid+1;
             }
-            else 
+            else
             {
                 high = mid-1;
             }
