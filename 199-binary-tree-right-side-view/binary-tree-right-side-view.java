@@ -16,21 +16,19 @@
 class Solution {
 
     public List<Integer> rightSideView(TreeNode root) {
-        List<Integer> res = new ArrayList<>();
-        recursionRight(root, 0, res);
+        List<Integer> ans = new ArrayList<>();
+        helper(root, 0, ans);
 
-        return res;
+        return ans;
     }
-    private void recursionRight(TreeNode root, int level, List<Integer> res) {
-        if (root == null) {
-            return;
-        }
 
-        if (res.size() == level) 
-        {
-            res.add(root.val);
-        }
-            recursionRight(root.right, level + 1, res);
-            recursionRight(root.left, level + 1, res);
+    public void helper(TreeNode root,int level,List<Integer> ans)
+    {
+        if(root==null) return;
+
+        if(level==ans.size()) ans.add(root.val);
+
+        helper(root.right,level+1,ans);
+        helper(root.left,level+1,ans);
     }
 }
