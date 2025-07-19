@@ -25,6 +25,8 @@ class Solution {
             if(curr.left!=null) st.push(curr.left);
             if(!st.isEmpty()) curr.right = st.peek();
             curr.left = null;
+
+            
         }
 
 
