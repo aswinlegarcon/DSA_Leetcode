@@ -13,9 +13,12 @@ class Solution {
         }
         while(i<s.length())
         {
+            
             char c = s.charAt(i);
-            sb.append(c);
             i++;
+            sb.append(c);
+            
+
         }
         return sb.toString();
 
