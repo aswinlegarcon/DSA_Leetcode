@@ -1,42 +1,39 @@
 class Solution {
-    public void nextPermutation(int[] nums) {
-        int index = -1;
-        for(int i=nums.length-2;i>=0;i--)
+    public void reverse(int[] arr,int start,int end)
+    {
+        while(start<=end)
         {
-            if(nums[i]<nums[i+1])
+            int temp = arr[start];
+            arr[start] = arr[end];
+            arr[end] = temp;
+            start++;
+            end--;
+        }
+    }
+    public void nextPermutation(int[] nums) {
+        int n = nums.length;
+        int breakP = -1;
+        for(int i=0;i<n-1;i++)
+        {
+            if(nums[i]<nums[i+1]) breakP = i;
+        }
+        if(breakP==-1)
+        {
+            reverse(nums,0,n-1);
+            return;
+        }
+        // find least greater
+        for(int i=n-1;i>=breakP;i--)
+        {
+            if(nums[i]>nums[breakP])
             {
-                index = i;
+                int temp = nums[i];
+                nums[i] = nums[breakP];
+                nums[breakP] = temp;
                 break;
             }
         }
-        if(index==-1)
-        {
-            reverse(0,nums.length-1,nums);
-            return;
-        }
+        reverse(nums,breakP+1,n-1);
 
-        for(int i=nums.length-1;i>=0;i--)
-        {
-            if(nums[i] > nums[index])
-            {
-                int temp = nums[index];
-                nums[index] = nums[i];
-                nums[i] = temp;
-                reverse(index+1,nums.length-1,nums);
-                return;
-            }
-        }
-    }
-
-    public void reverse(int l,int r,int[] arr)
-    {
-        while(l<r)
-        {
-            int temp = arr[l];
-            arr[l] = arr[r];
-            arr[r] = temp;
-            l++;
-            r--;
-        }
     }
 }
