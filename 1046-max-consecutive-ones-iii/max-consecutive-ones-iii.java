@@ -5,8 +5,10 @@ class Solution {
         int max = 0;
         int cnt0 = 0;
         int n = nums.length;
+        
         while(r<n)
         {
+
             if(nums[r]==0) cnt0++;
             
             
@@ -21,8 +23,11 @@ class Solution {
             {
                 max = Math.max(max,r-l+1);
             }
+
             
             r++;
+        
+        
         }
         return max;
     }
