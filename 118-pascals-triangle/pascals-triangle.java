@@ -13,12 +13,19 @@ class Solution {
             List<Integer> temp = new ArrayList<>();
             int ans = 1;
             temp.add(ans);
+
+            
             for(int i=1;i<row;i++)
             {
+
+
                 ans = ans * (row-i) / i;
                 temp.add(ans);
             }
+
             return temp;
+
+
         }
     
 }
