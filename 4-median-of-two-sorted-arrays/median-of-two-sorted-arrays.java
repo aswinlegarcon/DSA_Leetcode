@@ -7,6 +7,7 @@ class Solution {
         int low = 0;
         int high = n1;
         int left = (n1+n2+1) / 2;
+
         while(low<=high)
         {
             int mid1 = (low+high)/2;
@@ -36,6 +37,7 @@ class Solution {
             {
                 low = mid1+1;
             }
+            
 
         }
         return 0;
