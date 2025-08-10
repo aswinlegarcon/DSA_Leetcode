@@ -10,15 +10,14 @@ class Solution {
         set.add('u');
         for(int i=0;i<n;i++)
         {
-            int consCnt = 0;
             int vow[] = new int[5];
             for(int j=i;j<n;j++)
             {
                 char c = word.charAt(j);
-                if(!set.contains(c)) consCnt++;
+                if(!set.contains(c)) break;
                 int ind = getIndex(c);
                 if(ind!=-1) vow[ind]++;
-                if(getCnt(vow) && consCnt==0)
+                if(getCnt(vow))
                 {
                     cnt++;
                 }
