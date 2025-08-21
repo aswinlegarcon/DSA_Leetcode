@@ -2,9 +2,11 @@ class Solution {
     public int compress(char[] chars) {
         int n = chars.length;
         StringBuilder sb = new StringBuilder();
+        
         int ind = 0;
         while(ind<n)
         {
+
             char c = chars[ind];
             sb.append(c);
             int cnt = 1;
