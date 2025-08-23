@@ -1,20 +1,20 @@
 class Solution {
     public int minSteps(String s, String t) {
-        HashMap<Character,Integer> map1 = new HashMap<>();
-        HashMap<Character,Integer> map2 = new HashMap<>();
+        int hash1[] = new int[26];
+        int hash2[] = new int[26];
         int n = s.length();
         for(int i=0;i<n;i++)
         {
             char one = s.charAt(i);
             char two = t.charAt(i);
-            map1.put(one,map1.getOrDefault(one,0)+1);
-            map2.put(two,map2.getOrDefault(two,0)+1);
+            hash1[one -'a']++;
+            hash2[two -'a']++;
         }
         int cnt = 0;
-        for(var key:map1.keySet())
+        for(int i=0;i<26;i++)
         {
-            int cnt1 = map1.get(key);
-            int cnt2 = map2.get(key)==null?0:map2.get(key);
+            int cnt1 = hash1[i];
+            int cnt2 = hash2[i];
             if(cnt1>cnt2) cnt += (cnt1-cnt2);
         }
         return cnt;
