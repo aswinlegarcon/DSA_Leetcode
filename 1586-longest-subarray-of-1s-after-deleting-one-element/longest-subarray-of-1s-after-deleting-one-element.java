@@ -2,37 +2,32 @@ class Solution {
     public int longestSubarray(int[] nums) {
         int maxLen = 0;
         int cntZ = 0;
-        boolean check = false;
         int l = 0;
         int r = 0;
-        int zInd = 0;
         int n = nums.length;
+        int cnt = 0;
         for(int i=0;i<nums.length;i++)
         {
-            if(nums[i]==0)
+            if(nums[i]==1)
             {
-                 zInd = i;
-                 break;
+                cnt++;
             }
         }
+        if(cnt==n) return cnt-1;
         while(r<n)
         {
             if(nums[r]==0)
             {
                 cntZ++;
-                check = true;
             } 
-            if(cntZ>1)
+            while(cntZ>1)
             {
-                l = zInd+1;
-                zInd = r;
-                cntZ--;
+                if(nums[l]==0) cntZ--;
+                l++;
             }
-            if(cntZ==0) maxLen = Math.max(maxLen,r-l+1);
-            else maxLen = Math.max(maxLen,r-l);
+            maxLen = Math.max(maxLen,r-l+1);
             r++;
         }
-        if(!check) maxLen -= 1;
-        return maxLen;
+        return maxLen-1;
     }
 }
