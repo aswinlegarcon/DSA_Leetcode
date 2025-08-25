@@ -14,6 +14,7 @@ class Solution {
             }
         }
         if(cnt==n) return cnt-1;
+        
         while(r<n)
         {
             if(nums[r]==0)
