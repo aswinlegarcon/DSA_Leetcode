@@ -1,5 +1,6 @@
 class Solution {
     public int longestSubarray(int[] nums) {
+        
         int maxLen = 0;
         int cntZ = 0;
         int l = 0;
@@ -14,7 +15,7 @@ class Solution {
             }
         }
         if(cnt==n) return cnt-1;
-        
+
         while(r<n)
         {
             if(nums[r]==0)
