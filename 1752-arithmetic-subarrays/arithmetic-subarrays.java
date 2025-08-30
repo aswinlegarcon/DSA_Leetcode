@@ -3,9 +3,11 @@ class Solution {
         List<Boolean> ans = new ArrayList<>();
         int n = nums.length;
         int m = l.length;
+
         for(int i=0;i<m;i++)
         {
             ArrayList<Integer> temp = new ArrayList<>();
+            
             for(int j=l[i];j<=r[i];j++)
             {
                 temp.add(nums[j]);
@@ -23,6 +25,7 @@ class Solution {
             }
             ans.add(check);
         }
+
         return ans;
     }
 }
