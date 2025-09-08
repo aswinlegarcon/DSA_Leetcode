@@ -3,16 +3,12 @@ class Solution {
 
         String v1[] = version1.split("\\.");
         String v2[] = version2.split("\\.");
-
         int n1 = v1.length;
-        
         int n2 = v2.length;
-
         int n = Math.max(n1, n2);
         int l = 0;
         int r = 0;
-
-
+        
         for(int i =0;i<n;i++)
         {
 
