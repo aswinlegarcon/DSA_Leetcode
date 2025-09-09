@@ -3,6 +3,7 @@ class Solution {
         PriorityQueue<double[]> pq = new PriorityQueue<>( (a,b) -> {
             return Double.compare(b[0],a[0]);
         });
+        
         int n = classes.length;
         for(int i=0;i<n;i++)
         {
@@ -14,6 +15,7 @@ class Solution {
 
         while(extraStudents>0)
         {
+
             double arr[] = pq.poll();
             double pass = arr[1]+1;
             double total = arr[2]+1;
