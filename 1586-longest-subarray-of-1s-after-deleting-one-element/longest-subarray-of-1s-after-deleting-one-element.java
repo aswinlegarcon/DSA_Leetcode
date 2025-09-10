@@ -7,6 +7,7 @@ class Solution {
         int r = 0;
         int n = nums.length;
         int cnt = 0;
+        
         for(int i=0;i<nums.length;i++)
         {
             if(nums[i]==1)
@@ -14,8 +15,8 @@ class Solution {
                 cnt++;
             }
         }
-        if(cnt==n) return cnt-1;
 
+        if(cnt==n) return cnt-1;
         while(r<n)
         {
             if(nums[r]==0)
@@ -30,6 +31,8 @@ class Solution {
             maxLen = Math.max(maxLen,r-l+1);
             r++;
         }
+
         return maxLen-1;
+
     }
 }
