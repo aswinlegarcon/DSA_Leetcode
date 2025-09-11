@@ -1,6 +1,7 @@
 class Solution {
-    public int longestSubarray(int[] nums) {
-        
+
+    public int longestSubarray(int[] nums) 
+    {
         int maxLen = 0;
         int cntZ = 0;
         int l = 0;
@@ -31,7 +32,6 @@ class Solution {
             maxLen = Math.max(maxLen,r-l+1);
             r++;
         }
-
         return maxLen-1;
 
     }
