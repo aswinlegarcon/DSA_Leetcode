@@ -10,7 +10,7 @@ class Solution {
         {
             dp[n-1][i] = triangle.get(n-1).get(i);
         }
-
+        // taking the sum of bottom (min)
         for(int i=n-2;i>=0;i--)
         {
             for(int j=i;j>=0;j--)
