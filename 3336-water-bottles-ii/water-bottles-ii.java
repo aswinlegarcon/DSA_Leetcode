@@ -3,6 +3,7 @@ class Solution {
         int total = numBottles;
         int empty = numBottles;
         numBottles = 0;
+
         while(numExchange <= empty + numBottles)
         {
             if(numExchange <= empty)
@@ -18,6 +19,7 @@ class Solution {
                 numBottles = 0;
             }
         }
+        
         total += numBottles;
         return total;
     }
