@@ -12,6 +12,7 @@ class Solution {
         {
             score += ++max;
         }
-    return score;
+
+        return score;
     }
 }
