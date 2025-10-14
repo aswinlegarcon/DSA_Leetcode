@@ -1,5 +1,6 @@
 class Solution {
     public int jump(int[] nums) {
+        
         int cnt = 0;
         int r = 0;
         int l = 0;
@@ -16,4 +17,5 @@ class Solution {
         }
         return cnt;
     }
+
 }
