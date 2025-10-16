@@ -1,10 +1,13 @@
 class Solution {
-    public String[] findWords(String[] words) {
+    public String[] findWords(String[] words) 
+    {
+
         String[] lst = new String[3];
         lst[0] = "qwertyuiop";
         lst[1] = "asdfghjkl";
         lst[2] = "zxcvbnm";
         int n = words.length;
+        
         String[] ans = new String[n];
         int ind = 0;
 
@@ -34,6 +37,7 @@ class Solution {
                 ind++;
             } 
         }
+
         return Arrays.copyOf(ans,ind);
 
     }
