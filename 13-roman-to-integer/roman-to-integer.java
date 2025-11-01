@@ -5,6 +5,7 @@ class Solution {
         int sum = 0;
         for(int i=0;i<s.length();i++)
         {
+
             switch(s.charAt(i))
             {
                 case 'I':
@@ -65,6 +66,7 @@ class Solution {
                 sum += 1000;
                 break;
             }
+            
         }
         return sum;
         
