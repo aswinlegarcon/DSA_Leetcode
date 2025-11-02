@@ -3,10 +3,12 @@ class Solution {
         int n1 = nums1.length;
         int n2 = nums2.length;
         int n = n1+n2;
-        if(n1 > n2) return findMedianSortedArrays(nums2,nums1); // first arrays make as smaller
+        if(n1 > n2) return findMedianSortedArrays(nums2,nums1); 
+        // first arrays make as smaller
         int low = 0;
         int high = n1;
         int left = (n1+n2+1) / 2;
+        
         while(low<=high)
         {
             int mid1 = (low+high)/2;
