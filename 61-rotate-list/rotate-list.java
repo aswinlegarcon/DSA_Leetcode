@@ -13,12 +13,14 @@ class Solution {
     {
         int count = 1;
         ListNode temp = head;
+
         while(temp!=null)
         {
             if(count == k) return temp;
             count++;
             temp = temp.next;
         }
+        
         return temp;
     }
     public ListNode rotateRight(ListNode head, int k)
@@ -26,11 +28,13 @@ class Solution {
         if(head==null || k==0) return head;
         int length = 1;
         ListNode tail = head;
+
         while(tail.next!=null)
         {
             length++;
             tail = tail.next;
         }
+
         k = k%length;
         if(k==0) return head;
         tail.next = head;
