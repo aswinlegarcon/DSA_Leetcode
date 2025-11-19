@@ -1,13 +1,12 @@
 class Solution {
     public int findFinalValue(int[] nums, int original) {
-        while(ls(nums,original))
+        while(helper(nums,original))
         {
             original = original * 2;
         }
         return original;
     }
-
-    private boolean ls(int[] nums,int original)
+    private boolean helper(int[] nums,int original)
     {
         int l = 0;
         int r = nums.length-1;
