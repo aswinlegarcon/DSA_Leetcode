@@ -1,5 +1,5 @@
 /*
-// Definition for a Node.
+// Definition for a Nodee.
 class Node {
     int val;
     Node next;
@@ -12,7 +12,6 @@ class Node {
     }
 }
 */
-
 class Solution {
     public void insertNode(Node head)
     {
@@ -26,7 +25,6 @@ class Solution {
         }
 
     } 
-
     public void connectRandom(Node head)
     {
         Node temp = head;
@@ -44,7 +42,6 @@ class Solution {
             temp = temp.next.next;
         }
     }
-
     public Node extractList(Node head)
     {
         Node temp = head;
@@ -64,7 +61,5 @@ class Solution {
         insertNode(head);
         connectRandom(head);
         return extractList(head);
-
-        
     }
 }
