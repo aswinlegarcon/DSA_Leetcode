@@ -1,5 +1,6 @@
 class Solution {
     public int trap(int[] arr) {
+
         int n = arr.length;
         int ans = 0;
         int l = 0;
@@ -9,6 +10,7 @@ class Solution {
 
         while(l < r)
         {
+
             if(arr[l] <= arr[r])
             {
                 if(leftMax > arr[l])
@@ -27,8 +29,10 @@ class Solution {
                 else rightMax = arr[r];
                 r--;
             }
+
         }
     
         return ans;
     }
+      
 }
