@@ -11,6 +11,7 @@
 class Solution {
     public ListNode mergeTwoLists(ListNode list1, ListNode list2) 
     {
+
         ListNode t1 = list1;
         ListNode t2 = list2;
 
@@ -39,4 +40,5 @@ class Solution {
         return dummy.next;
         
     }
+    
 }
