@@ -10,8 +10,10 @@ class Solution {
         left = 0, 
         bottom = n - 1, 
         right = m - 1;
+
         while (top <= bottom && left <= right)
-         {
+        {
+
             for (int i = left; i <= right; i++)
             {
                 result.add( matrix[top][i]);
@@ -41,7 +43,9 @@ class Solution {
                 left++;
             }
         }
+
         return result;
     }
+    
     
 }
