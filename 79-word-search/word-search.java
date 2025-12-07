@@ -1,5 +1,7 @@
 class Solution {
+
     public boolean exist(char[][] board, String word) {
+        
         int n = board.length;
         int m = board[0].length;
         int index = 0;
@@ -21,6 +23,7 @@ class Solution {
 
     public boolean search(char[][] board,String word,int row,int col,int index,int n,int m)
     {
+
         if(index==word.length())
         {
             return true;
@@ -44,4 +47,5 @@ class Solution {
         
         return top || right || left|| bottom;
     }
+
 }
