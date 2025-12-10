@@ -24,6 +24,7 @@ class Solution {
 
     public ListNode mergeList(ListNode head1,ListNode head2)
     {
+
         ListNode t1 = head1;
         ListNode t2 = head2;
         ListNode dummy = new ListNode(-1);
@@ -55,8 +56,10 @@ class Solution {
 
         return dummy.next;
     }
+
     public ListNode sortList(ListNode head) 
     {
+
     //    merge sort
         if(head==null || head.next==null) return head;
         ListNode mid = findMid(head);
@@ -66,5 +69,7 @@ class Solution {
         leftHead = sortList(leftHead); // left part by making mid.next = null
         rightHead = sortList(rightHead); // right part by making head as mid.next
         return mergeList(leftHead,rightHead); // sort both left and right part
+
     }
+    
 }
