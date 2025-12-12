@@ -1,8 +1,10 @@
 class Solution {
     public int findPeakElement(int[] nums) {
+
         int n = nums.length;
         int low = 1;
         int high = n-2;
+
         if(n==1)
         {
             return 0;
@@ -15,6 +17,7 @@ class Solution {
         {
             return n-1;
         }
+        
 
         while(low<=high)
         {
@@ -33,5 +36,6 @@ class Solution {
             }
         }
         return -1;
+
     }
 }
