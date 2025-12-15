@@ -1,7 +1,7 @@
 class Solution {
     public int numWaterBottles(int numBottles, int numExchange) {
-        int total = numBottles;
 
+        int total = numBottles;
         int empty = numBottles%numExchange;
         numBottles = numBottles/numExchange + empty;
         while(numBottles >= numExchange)
@@ -12,5 +12,6 @@ class Solution {
         }
         total += numBottles - empty;
         return total;
+
     }
 }
