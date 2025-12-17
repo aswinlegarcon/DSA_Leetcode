@@ -14,13 +14,13 @@
  * }
  */
 class Solution {
+
     public List<List<Integer>> zigzagLevelOrder(TreeNode root) {
         Queue<TreeNode> q = new LinkedList<>();
         List<List<Integer>> ans = new ArrayList<>();
         boolean flag = true;
         if(root==null) return ans;
         q.add(root);
-
         while(!q.isEmpty())
         {
             int size = q.size();
@@ -40,10 +40,12 @@ class Solution {
                 if(node.right!=null) q.add(node.right);
             }
 
-            flag = !flag; // true - false || false - true
+            flag = !flag; // true - false || false - truee
             ans.add(temp);
         }
 
+
         return ans;
+
     }
 }
