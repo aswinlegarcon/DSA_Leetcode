@@ -8,7 +8,10 @@ class Solution {
             {
                 char a = strs[j].charAt(i);
                 char b = strs[j+1].charAt(i);
-                if(b<a) check = false;
+                if(b<a){
+                    check = false;
+                    break;
+                } 
             }
             if(!check) cnt++;
         }
