@@ -8,7 +8,6 @@ class Solution {
             if(res==target) ans.add(path);
             return;
         }
-
         for(int j=i;j<s.length();j++)
         {
             if(j>i && s.charAt(i)=='0')
@@ -24,10 +23,12 @@ class Solution {
             {
                 solve(s,target,ans,path+"+"+num,j+1,res+num,num);
                 solve(s,target,ans,path+"-"+num,j+1,res-num,-num);
-                solve(s,target,ans,path+"*"+num,j+1,res-prev+prev*num,prev*num);
+                solve(s,target,ans,path+"*"+num,j+1,res-prev+prev
+                *num,prev*num);
             }
         }
     }
+
     public List<String> addOperators(String num, int target) {
         List<String> ans = new ArrayList<>();
         solve(num,target,ans,"",0,0,0);
