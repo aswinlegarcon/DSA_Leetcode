@@ -1,5 +1,7 @@
 class Solution {
+
     public List<String> summaryRanges(int[] nums) {
+
         if(nums.length==0) return new ArrayList<>();
         if(nums.length==1)
         {
@@ -30,11 +32,14 @@ class Solution {
                 ans.add(temp);
             }
         }
+        
          if(nums[nums.length-1] != nums[nums.length-2]+1) 
             {
                 String temp = String.valueOf(nums[nums.length-1]);
                 ans.add(temp);
             }
         return ans;
+
     }
+
 }
