@@ -1,34 +1,37 @@
 class Solution {
     public String removeKdigits(String num, int k) {
-        Stack<Character> stack = new Stack<>();
-        
-        for (char digit : num.toCharArray()) {
-            while (!stack.isEmpty() && k > 0 && stack.peek() > digit) {
-                stack.pop();
+        Stack<Character> st = new Stack<>();
+        for(int i=0; i<num.length();i++)
+        {
+            while(!st.empty() && k > 0 && (st.peek()-'0') > 
+            (num.charAt(i) - '0') )
+            {
+                st.pop();
                 k--;
             }
-            stack.push(digit);
+            st.push(num.charAt(i));
         }
-        
-        // Remove remaining k digits from the end of the stack
-        while (k > 0 && !stack.isEmpty()) {
-            stack.pop();
-            k--;
+        if(k>0)
+        {
+            while(k>0)
+            {
+                st.pop();
+                k--;
+            }
         }
-        
-        // Construct the resulting string from the stack
+        if(st.empty()) return "0";
         StringBuilder sb = new StringBuilder();
-        while (!stack.isEmpty()) {
-            sb.append(stack.pop());
+        while(!st.empty())
+        {
+            sb.append(st.peek());
+            st.pop();
         }
-        sb.reverse(); // Reverse to get the correct order
-        
-        // Remove leading zeros
-        while (sb.length() > 0 && sb.charAt(0) == '0') {
-            sb.deleteCharAt(0);
+        while(sb.length()!=0 && sb.charAt(sb.length()-1)=='0')
+        {
+            sb.deleteCharAt(sb.length()-1);
         }
-        
-        // Handle edge case where result might be empty
-        return sb.length() > 0 ? sb.toString() : "0";
+        if(sb.length()==0) return "0";
+
+        return sb.reverse().toString();   
     }
 }
