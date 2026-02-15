@@ -1,24 +1,19 @@
+
+import java.math.BigInteger;
 class Solution {
     public String addBinary(String a, String b) {
-        char[] charArrA = a.toCharArray();
-        char[] charArrB = b.toCharArray();
-        StringBuilder sb = new StringBuilder();
+        BigInteger x = new BigInteger(a, 2);
+        BigInteger y = new BigInteger(b, 2);
+        BigInteger zero = new BigInteger("0", 2);
+        BigInteger carry, answer;
 
-        int i = charArrA.length - 1, j = charArrB.length - 1;
-        int carry = 0;
-        while (i >= 0 || j >= 0 || carry > 0) {
-            int aNum = i >= 0 ? charArrA[i] - '0' : 0;
-            int bNum = j >= 0 ? charArrB[j] - '0' : 0;
-
-            int sum = aNum + bNum + carry;
-            int digit = sum % 2;
-            carry = sum / 2;
-            i--;
-            j--;
-
-            sb.append((char)(digit + '0'));
+        while (y.compareTo(zero) != 0) {
+            answer = x.xor(y);
+            carry = x.and(y).shiftLeft(1);
+            x = answer;
+            y = carry;
         }
 
-        return sb.reverse().toString();
+        return x.toString(2);
     }
 }
