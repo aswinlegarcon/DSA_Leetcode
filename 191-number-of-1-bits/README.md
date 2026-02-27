@@ -30,6 +30,7 @@
 <div class="example-block">
 <p><strong>Input:</strong> <span class="example-io">n = 2147483645</span></p>
 
+
 <p><strong>Output:</strong> <span class="example-io">30</span></p>
 
 <p><strong>Explanation:</strong></p>
