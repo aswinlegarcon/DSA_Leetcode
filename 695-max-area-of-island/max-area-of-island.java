@@ -14,9 +14,11 @@ class Solution {
                 if(grid[i][j]==1 && !visited[i][j])
                 {
                     max = Math.max(helper(grid,i,j,visited,n,m),max);
+                    
                 }
             }
         }
+
         return max;
     }
 
@@ -26,7 +28,9 @@ class Solution {
 
         visited[i][j] = true;
 
+
         return 1 + helper(grid, i+1, j, visited,n,m) + helper(grid, i-1, j, visited,n,m) 
         + helper(grid, i, j+1, visited,n,m) + helper(grid, i, j-1, visited,n,m);
+
     }
 }
