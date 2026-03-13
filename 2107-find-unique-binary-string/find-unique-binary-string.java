@@ -1,5 +1,6 @@
 class Solution {
     public String findDifferentBinaryString(String[] nums) {
+
         int n = nums.length;
         int possibility = (int)Math.pow(2,n);
 
@@ -11,6 +12,7 @@ class Solution {
             arr[val]++;
         }
 
+
         for(int i=0;i<possibility;i++)
         {
             if(arr[i]==0)
@@ -19,6 +21,8 @@ class Solution {
                 return "0".repeat(n-ans.length()) + ans;
             }
         }
+        
         return "0".repeat(n);
     }
+
 }
