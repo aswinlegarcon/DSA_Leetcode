@@ -7,12 +7,7 @@ class Solution {
             mat = rotate(mat,n);
             if(check(mat,target)) return true;
         }
-
         return false;
-        
-
-
-      
     }
 
     public int[][] rotate(int[][] mat,int n)
@@ -25,7 +20,6 @@ class Solution {
                 temp[j][n-i-1] = mat[i][j];
             }
         }
-
         return temp;
     }
 
