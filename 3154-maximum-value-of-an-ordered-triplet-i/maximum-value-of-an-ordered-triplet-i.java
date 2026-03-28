@@ -14,15 +14,12 @@ class Solution {
         {
             rightMax[i] = Math.max(rightMax[i+1],nums[i]);
         }
-
         for(int i=1;i<n-1;i++)
         {
             int left = leftMax[i-1];
             int right = rightMax[i+1];
             max = Math.max(max, (long)(((long)left-(long)nums[i])*(long)right));
         }
-
         return max>0?max:0;
- 
     }
 }
