@@ -4,7 +4,6 @@ class Solution {
         int n = encodedText.length();
         int cols = (int)Math.ceil((double)n/rows);
         char mat[][] = new char[rows][cols];
-
         char encoded[] =  encodedText.toCharArray();
         int ind = 0;
         for(int i=0;i<rows;i++)
@@ -15,8 +14,7 @@ class Solution {
                 ind++;
             }
         }
-        StringBuilder sb = new StringBuilder();
-        
+        StringBuilder sb = new StringBuilder();   
         for(int i=0;i<cols;i++)
         {
             int row = 0;
@@ -29,10 +27,6 @@ class Solution {
             }
         
         }
-        
-
-
         return sb.toString().replaceAll("\\s+$","");
-
     }
 }
