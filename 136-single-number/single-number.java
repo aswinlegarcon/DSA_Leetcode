@@ -1,10 +1,10 @@
 class Solution {
     public int singleNumber(int[] nums) {
-        int XOR = 0;
-        for(int num:nums)
+        int xor = nums[0];
+        for(int i=1;i<nums.length;i++)
         {
-            XOR = XOR ^ num; // do ^ on all numbers will cancel the repeating numbers and remain with the single number
+            xor = xor ^ nums[i];
         }
-        return XOR;
-}
+        return xor;
+    }
 }
