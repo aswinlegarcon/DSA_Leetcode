@@ -1,11 +1,14 @@
 class Solution {
     public String decodeCiphertext(String encodedText, int rows) {
+
         if(rows==1) return encodedText;
+
         int n = encodedText.length();
         int cols = (int)Math.ceil((double)n/rows);
         char mat[][] = new char[rows][cols];
         char encoded[] =  encodedText.toCharArray();
         int ind = 0;
+
         for(int i=0;i<rows;i++)
         {
             for(int j=0;j<cols;j++)
@@ -14,6 +17,7 @@ class Solution {
                 ind++;
             }
         }
+        
         StringBuilder sb = new StringBuilder();   
         for(int i=0;i<cols;i++)
         {
@@ -29,4 +33,5 @@ class Solution {
         }
         return sb.toString().replaceAll("\\s+$","");
     }
+
 }
