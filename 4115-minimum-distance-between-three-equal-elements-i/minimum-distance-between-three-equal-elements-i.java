@@ -6,9 +6,10 @@ class Solution {
         {
             for(int j=i+1;j<n;j++)
             {
+                if(nums[i] != nums[j]) continue;
                 for(int k=j+1;k<n;k++)
                 {
-                    if(nums[i]==nums[j] && nums[j] == nums[k])
+                    if(nums[j] == nums[k])
                     {
                         int dist = Math.abs(i-j) + Math.abs(j-k) + Math.abs(k-i);
                         ans = Math.min(ans,dist);
