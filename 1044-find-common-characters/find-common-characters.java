@@ -1,5 +1,6 @@
 class Solution {
     public List<String> commonChars(String[] words) {
+
         int n = words.length;
         List<String> ans = new ArrayList<>();
         int cnt[] = countFreq(words[0]);
@@ -8,8 +9,6 @@ class Solution {
         {
             cnt = updateFreq(cnt,countFreq(words[i]));
         }
-
-
         for(int i=0;i<26;i++)
         {
             if(cnt[i]==0) continue;
@@ -23,7 +22,6 @@ class Solution {
         }
         return ans;
     }
-
     private int[] updateFreq(int arr1[],int arr2[])
     {
         int ans[] = new int[26];
@@ -33,7 +31,6 @@ class Solution {
         }
         return ans;
     }
-
     private int[] countFreq(String word)
     {
         int count[] = new int[26];
