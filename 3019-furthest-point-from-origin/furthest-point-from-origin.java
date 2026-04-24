@@ -3,6 +3,7 @@ class Solution {
         int lcnt = 0;
         int rcnt = 0;
         int n = moves.length();
+        
         for(int i=0;i<n;i++)
         {
             char c = moves.charAt(i);
@@ -16,10 +17,12 @@ class Solution {
             }
         }
 
+
         if(lcnt>=rcnt)
         {
             return n-rcnt*2;
         }
         return n-lcnt*2;
     }
+
 }
