@@ -6,21 +6,25 @@ class Spreadsheet {
         this.spreadSheet = new int[rows][26];
     }
     
+    
     public void setCell(String cell, int value) {
         char col = cell.substring(0,1).charAt(0);
         int row = Integer.parseInt(cell.substring(1,cell.length()));
         spreadSheet[row-1][col-'A'] = value;
     }
+
     
     public void resetCell(String cell) {
         setCell(cell,0);
     }
     
+
     public int getValue(String formula) {
         char arr[] = formula.toCharArray();
         int i = 1; // skip '='
         int n = arr.length;
         int ans = 0;
+
 
         while (i < n) {
             char temp = arr[i];
@@ -52,6 +56,7 @@ class Spreadsheet {
         }
         return ans;
     }
+
 }
 
 /**
