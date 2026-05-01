@@ -1,10 +1,12 @@
 class Solution {
     public int singleNumber(int[] nums) {
+
         Arrays.sort(nums);
         int cnt = 1;
         int num = nums[0];
         for(int i=1;i<nums.length;i++)
         {
+
             if(num==nums[i])
             {
                 cnt++;
@@ -21,9 +23,11 @@ class Solution {
                     return num;
                 }
             }
+        
         }
-        if(cnt==1) return nums[nums.length-1];
-        return 0;
 
+        if(cnt==1) return nums[nums.length-1];
+        
+        return 0;
     }
 }
