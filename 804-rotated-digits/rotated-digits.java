@@ -1,4 +1,5 @@
 class Solution {
+    
     public int rotatedDigits(int n) {
         int cnt = 0;
         for(int i=1;i<=n;i++)
@@ -7,6 +8,7 @@ class Solution {
         }
         return cnt;
     }
+
 
     private boolean helper(int i)
     {
@@ -20,4 +22,5 @@ class Solution {
         }
         return check;
     }
+
 }
