@@ -9,8 +9,10 @@
  * }
  */
 class Solution {
+
     public ListNode findLastNode(ListNode head,int k)
     {
+
         int count = 1;
         ListNode temp = head;
 
@@ -22,9 +24,12 @@ class Solution {
         }
 
         return temp;
+
     }
+
     public ListNode rotateRight(ListNode head, int k)
     {
+
         if(head==null || k==0) return head;
         int length = 1;
         ListNode tail = head;
@@ -45,4 +50,5 @@ class Solution {
         return head;
         
     }
+
 }
