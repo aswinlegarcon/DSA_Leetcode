@@ -1,5 +1,6 @@
 class Solution {
     public List<String> simplifiedFractions(int n) {
+        
         List<String> ans = new ArrayList<>();
 
         for (int i = 1; i < n; i++) {
@@ -12,9 +13,12 @@ class Solution {
         }
 
         return ans;
+
     }
 
-    public int gcd(int a, int b) {
+    public int gcd(int a, int b) 
+    {
+
         while (b != 0) {
             int temp = b;
             b = a % b;
@@ -22,4 +26,5 @@ class Solution {
         }
         return a;
     }
+
 }
