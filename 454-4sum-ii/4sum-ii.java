@@ -1,5 +1,6 @@
 class Solution {
     public int fourSumCount(int[] nums1, int[] nums2, int[] nums3, int[] nums4) {
+        
         int cnt = 0;
         int n = nums1.length;
         HashMap<Integer,Integer> map = new HashMap<>();
@@ -21,4 +22,5 @@ class Solution {
 
         return cnt;
     }
+
 }
