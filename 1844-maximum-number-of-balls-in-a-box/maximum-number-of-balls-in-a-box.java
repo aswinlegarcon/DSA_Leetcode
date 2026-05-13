@@ -1,18 +1,15 @@
 class Solution {
     public int countBalls(int lowLimit, int highLimit) {
-        HashMap<Integer,Integer> map = new HashMap<>();
-
+        int hash[] = new int[46]; // largest num is 99999 = 45
+        int max = 0;
+        
         for(int i=lowLimit;i<=highLimit;i++)
         {
             int sum = getSum(i);
-            map.put(sum,map.getOrDefault(sum,0)+1);
+            hash[sum]++;
+            max = Math.max(max,hash[sum]);
         }
 
-        int max = 0;
-        for(var key:map.keySet())
-        {
-            max = Math.max(map.get(key),max);
-        }
         return max;
     }
 
