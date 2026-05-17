@@ -1,5 +1,7 @@
 class Solution {
+
     public int[] separateDigits(int[] nums) {
+
         ArrayList<Integer> lst = new ArrayList<>();
         int ind = 0;
         for(int num : nums)
@@ -20,5 +22,7 @@ class Solution {
             ans[i] = lst.get(i);
         }
         return ans;
+        
     }
+
 }
