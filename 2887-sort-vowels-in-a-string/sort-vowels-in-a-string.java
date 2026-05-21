@@ -1,5 +1,6 @@
 class Solution {
     public String sortVowels(String s) {
+        
         ArrayList<Character> lst = new ArrayList<>();
         int n = s.length();
         for(int i=0;i<n;i++)
@@ -30,9 +31,11 @@ class Solution {
 
     }
 
+
     private boolean isVowel(char c)
     {
         if(c=='a' || c=='e'|| c=='i'|| c=='o'||c=='u'||c=='A'||c=='E'||c=='I'||c=='O'||c=='U') return true;
         return false;
     }
+
 }
