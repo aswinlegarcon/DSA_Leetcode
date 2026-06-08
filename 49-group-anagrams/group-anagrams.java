@@ -1,27 +1,32 @@
 class Solution {
-    public List<List<String>> groupAnagrams(String[] strs) 
-    {   
-        HashMap<String,List<String>> map = new HashMap<>(); // key - sorted string -- value - list of string with same key
-        for(String str:strs)
-        {
-            char[] chars = str.toCharArray();
-            Arrays.sort(chars);
+    public List<List<String>> groupAnagrams(String[] strs) {
 
-            String key = new String(chars);
-            if(map.containsKey(key))
-            {
-                map.get(key).add(str);
+        TreeMap<int[], List<String>> map = new TreeMap<>((a, b) -> {
+            for (int i = 0; i < 26; i++) {
+                if (a[i] != b[i]) {
+                    return Integer.compare(a[i], b[i]);
+                }
             }
-            else
-            {
-                map.put(key,new ArrayList<>());
-                map.get(key).add(str);
+            return 0;
+        });
+
+        for (String str : strs) {
+
+            int[] hash = new int[26];
+
+            for (char c : str.toCharArray()) {
+                hash[c - 'a']++;
+            }
+
+            if (map.containsKey(hash)) {
+                map.get(hash).add(str);
+            } else {
+                List<String> list = new ArrayList<>();
+                list.add(str);
+                map.put(hash, list);
             }
         }
 
-        List<List<String>> result = new ArrayList<>(map.values());
-        return result;
-        
-        
+        return new ArrayList<>(map.values());
     }
 }
