@@ -5,6 +5,7 @@ class Solution {
         int n = landStartTime.length;
         int m = waterStartTime.length;
         int i = 0;
+        
         while(i < n && i < m)
         {
             int landRideEnd = landStartTime[i] + landDuration[i];
@@ -66,6 +67,7 @@ class Solution {
 
         }
 
+
         while(i < n)
         {
             int landRideEnd = landStartTime[i] + landDuration[i];
@@ -85,6 +87,7 @@ class Solution {
             i++;
         }
 
+
         while(i < m)
         {
             int waterRideEnd = waterStartTime[i] + waterDuration[i];
@@ -102,6 +105,7 @@ class Solution {
             }
             i++;
         }
+
 
         return min;
         
