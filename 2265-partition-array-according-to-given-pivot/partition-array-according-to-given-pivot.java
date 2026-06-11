@@ -3,36 +3,36 @@ class Solution {
         int n = nums.length;
         int[] result = new int[n];
 
-        ArrayList<Integer> less = new ArrayList<>();
-        ArrayList<Integer> equal = new ArrayList<>();
-        ArrayList<Integer> greater = new ArrayList<>();
-
-        for(int i=0;i<n;i++)
+        int left = 0;
+        int right = n-1;
+        int i = 0;
+        int j = n-1;
+        while(i < n)
         {
-            int num = nums[i];
-            if(num < pivot) less.add(num);
-            else if(num == pivot) equal.add(num);
-            else greater.add(num);
-        }
-        int ind = 0;
-        for(int num:less)
-        {
-            result[ind] = num;
-            ind++;
-        }
-
-        for(int num:equal)
-        {
-            result[ind] = num;
-            ind++;
+            if(nums[i] < pivot)
+            {
+                result[left] = nums[i];
+                left++;
+            }
+            if(nums[j] > pivot)
+            {
+                result[right] = nums[j];
+                right--;
+            }
+            i++;
+            j--;
         }
 
-        for(int num:greater)
+        while(left<=right)
         {
-            result[ind] = num;
-            ind++;
+            result[left] = pivot;
+            result[right] = pivot;
+            left++;
+            right--;
         }
-        
+
+
+
     return result;
     }
 }
