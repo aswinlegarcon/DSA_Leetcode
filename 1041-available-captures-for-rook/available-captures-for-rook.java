@@ -2,6 +2,7 @@ class Solution {
     public int numRookCaptures(char[][] board) {
         int rook[] = new int[2];
         int n = 8;
+        
         for(int i=0;i<n;i++)
         {
             for(int j=0;j<n;j++)
@@ -13,6 +14,7 @@ class Solution {
                 }
             }
         }
+
 
         int cnt = 0;
         int row = rook[0];
@@ -27,6 +29,7 @@ class Solution {
             }
         }
         //right
+
         for(int j=col+1;j<n;j++)
         {
             if(board[row][j] == '.') continue;
@@ -35,7 +38,9 @@ class Solution {
                 break;
             }
         }
+
         //top
+
         for(int i=row-1;i>=0;i--)
         {
             if(board[i][col] == '.') continue;
@@ -44,6 +49,7 @@ class Solution {
                 break;
             }
         }
+
         //bottom
         for(int i=row+1;i<n;i++)
         {
@@ -53,6 +59,7 @@ class Solution {
                 break;
             }
         }
+
         return cnt;
     }
 }
