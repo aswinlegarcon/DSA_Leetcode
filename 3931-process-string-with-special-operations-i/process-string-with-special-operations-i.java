@@ -1,35 +1,22 @@
 class Solution {
     public String processStr(String s) {
         StringBuilder sb = new StringBuilder();
-        char[] arr = s.toCharArray();
-        for(int i=0;i<arr.length;i++)
-        {
-            char c = arr[i];
-            if(Character.isLetter(c))
-            {
-                sb.append(c);
-            }
-            else
-            {
-                switch(c){
-                case '*':
-                    if(sb.length()>0)
-                    {
-                        sb.deleteCharAt(sb.length()-1);
-                    }
-                    break;
-                case '#':
-                    String dup = sb.toString();
-                    sb.append(dup);
-                    break;
-                case '%':
-                    String rev = sb.reverse().toString();
-                    sb = new StringBuilder(rev);
-                    break;
+
+        for(int i=0; i<s.length(); i++){
+            char ch = s.charAt(i);
+            if(ch == '#'){
+                sb.append(sb.toString());
+            }else if(ch == '%'){
+                sb.reverse();
+            }else if(ch == '*'){
+                if(sb.length() > 0){
+                    sb.deleteCharAt(sb.length() - 1);
                 }
+            }else{
+                sb.append(ch);
             }
-            
         }
         return sb.toString();
+
     }
 }
