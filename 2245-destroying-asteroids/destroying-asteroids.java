@@ -7,6 +7,7 @@ class Solution {
         
         for(int i=0;i<n;i++)
         { 
+
             if(massOfPlanet >= asteroids[i])
             {
                 massOfPlanet += asteroids[i];
@@ -15,6 +16,7 @@ class Solution {
             {
                 return false;
             }
+            
         }
 
         return true;
