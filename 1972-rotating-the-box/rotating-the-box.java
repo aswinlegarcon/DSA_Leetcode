@@ -1,5 +1,6 @@
 class Solution {
     public char[][] rotateTheBox(char[][] boxGrid) {
+        
         int m = boxGrid.length;
         int n = boxGrid[0].length;
         char[][] ans = new char[n][m];
@@ -23,6 +24,7 @@ class Solution {
             }
         }
 
+
         for(int i=0;i<m;i++)
         {
             for(int j=0;j<n;j++)
@@ -31,9 +33,8 @@ class Solution {
             }
         }
 
-
-
         return ans;
     }
+
 }
 
