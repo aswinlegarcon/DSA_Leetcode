@@ -1,6 +1,7 @@
 class Solution {
     
     public int numberOfSubstrings(String s) {
+        
         int a = -1;
         int b = -1;
         int c = -1;
