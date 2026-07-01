@@ -1,4 +1,5 @@
 class Solution {
+
     public long maxTotalValue(int[] nums, int k) {
         int n = nums.length;
         long max = Long.MIN_VALUE;
@@ -10,4 +11,5 @@ class Solution {
         }
         return (max-min)*k;
     }
+
 }
