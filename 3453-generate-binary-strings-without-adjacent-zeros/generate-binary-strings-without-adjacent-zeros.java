@@ -1,19 +1,26 @@
 class Solution {
-    private void solve(List<String> ans, int n, String temp) {
-        if (temp.length() == n) {
-            ans.add(temp);
-            return;
-        }
-
-        if (temp.isEmpty() || temp.charAt(temp.length() - 1) != '0')
-            solve(ans, n, temp + "0");
-
-        solve(ans, n, temp + "1");
+    public List<String> validStrings(int n) {
+        List<String> lst = new ArrayList<>();
+        helper("0",n,lst);
+        helper("1",n,lst);
+        return lst;
     }
 
-    public List<String> validStrings(int n) {
-        List<String> ans = new ArrayList<>();
-        solve(ans, n, "");
-        return ans;
+    private void helper(String s,int n, List<String> lst)
+    {
+        if(s.length()>=n)
+        {
+            lst.add(s);
+            return;
+        }
+        if(s.charAt(s.length()-1)=='0')
+        {
+            helper(s + "1",n,lst);
+        }
+        if(s.charAt(s.length()-1)=='1') 
+        {
+            helper(s + "0",n,lst);
+            helper(s + "1",n,lst);
+        }
     }
 }
