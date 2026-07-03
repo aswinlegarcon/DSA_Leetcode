@@ -1,6 +1,7 @@
 class Solution {
 
     public long maxTotalValue(int[] nums, int k) {
+        
         int n = nums.length;
         long max = Long.MIN_VALUE;
         long min = Long.MAX_VALUE;
@@ -10,6 +11,7 @@ class Solution {
             min = Math.min(min,nums[i]);
         }
         return (max-min)*k;
+
     }
 
 }
