@@ -1,4 +1,5 @@
 class Solution {
+    
     public int uniqueMorseRepresentations(String[] words) {
         String[] morse = {".-","-...","-.-.","-..",".","..-.","--.","....","..",".---","-.-",".-..","--","-.","---",".--.","--.-",".-.","...","-","..-","...-",".--","-..-","-.--","--.."};
 
@@ -16,4 +17,5 @@ class Solution {
         return transformedSet.size();
 
     }
+
 }
