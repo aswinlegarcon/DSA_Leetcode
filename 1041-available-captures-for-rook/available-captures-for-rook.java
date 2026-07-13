@@ -38,6 +38,7 @@ class Solution {
                 break;
             }
         }
+        
 
         //top
 
@@ -58,8 +59,10 @@ class Solution {
                 if(board[i][col] == 'p') cnt++;
                 break;
             }
+            
         }
 
         return cnt;
+        
     }
 }
