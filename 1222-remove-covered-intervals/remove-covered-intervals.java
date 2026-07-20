@@ -1,4 +1,5 @@
 class Solution {
+
     public int removeCoveredIntervals(int[][] intervals) {
         Arrays.sort(intervals, (a,b) -> {
             int diff = a[0] - b[0];
@@ -21,5 +22,7 @@ class Solution {
             }
         }
         return cnt;
+        
     }
+
 }
