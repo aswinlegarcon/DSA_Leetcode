@@ -16,6 +16,8 @@ class Solution {
                 cnt++;
             }
         }
+        
         return cnt;
+
     }
 }
