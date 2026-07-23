@@ -1,4 +1,5 @@
 class Solution {
+    
     public String restoreString(String s, int[] indices) {
         StringBuilder sb = new StringBuilder(s);
         int n = indices.length;
@@ -8,4 +9,5 @@ class Solution {
         }
         return sb.toString();
     }
+    
 }
