@@ -15,6 +15,7 @@
 <p><strong class="example">Example 1:</strong></p>
 
 <pre>
+	
 <strong>Input:</strong> nums = [1,1,2,3,5]
 <strong>Output:</strong> 1
 <strong>Explanation:</strong> You can delete either <code>nums[0]</code> or <code>nums[1]</code> to make <code>nums</code> = [1,2,3,5] which is beautiful. It can be proven you need at least 1 deletion to make <code>nums</code> beautiful.
