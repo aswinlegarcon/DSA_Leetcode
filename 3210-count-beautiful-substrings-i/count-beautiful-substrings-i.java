@@ -1,5 +1,6 @@
 class Solution {
     public int beautifulSubstrings(String s, int k) {
+        
         int cnt = 0;
         int n = s.length();    
         for(int i=0;i<n;i++)
@@ -16,4 +17,5 @@ class Solution {
         }
         return cnt;
         }
+
     }
