@@ -1,5 +1,7 @@
 class Solution {
+
     public int minSwaps(String s) {
+        
         int n = s.length();
         int ones = 0, zero = 0;
         for(char c : s.toCharArray()){
@@ -31,4 +33,5 @@ class Solution {
         
         return swaps/2;
     }
+
 }
