@@ -1,4 +1,5 @@
 class Solution {
+    
     public int minimumPushes(String word) {
         
         int[] hash = new int[26];
@@ -19,6 +20,6 @@ class Solution {
             min += (toMultiply*vals);
         }
 
-    return min;
+        return min;
     }
 }
