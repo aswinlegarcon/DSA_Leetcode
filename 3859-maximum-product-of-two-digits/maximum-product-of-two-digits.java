@@ -1,6 +1,5 @@
 class Solution {
     public int maxProduct(int n) {
-        
         int max = Integer.MIN_VALUE;
         int max2 = max;
         while(n>0)
@@ -18,6 +17,5 @@ class Solution {
             n = n/10;
         }
         return max*max2;
-
     }
 }
