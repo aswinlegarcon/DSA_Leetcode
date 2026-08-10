@@ -1,4 +1,5 @@
 class Solution {
+
     public String clearStars(String s) {
         PriorityQueue<Character> pq = new PriorityQueue<>();
         int n = s.length();
@@ -23,11 +24,13 @@ class Solution {
                 toAdd[i] = true;
             }
         } 
+        
         StringBuilder ans = new StringBuilder();
         for(int i=0;i<n;i++)
         {
             if(toAdd[i]) ans.append(""+arr[i]);
         }
         return ans.toString();
+
     }
 }
