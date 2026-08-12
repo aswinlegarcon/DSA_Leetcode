@@ -12,6 +12,7 @@ class Solution {
             if (count == k) result = curr.toString();
             return;
         }
+        
 
         char[] chars = {'a','b','c'};
 
@@ -30,4 +31,5 @@ class Solution {
         dfs(n, k, new StringBuilder());
         return result;
     }
+    
 }
