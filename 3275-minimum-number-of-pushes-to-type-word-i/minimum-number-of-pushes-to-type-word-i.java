@@ -1,5 +1,7 @@
 class Solution {
+    
     public int minimumPushes(String word) {
+
         int cnt = 0;
         int n = word.length();
         if(n<=8) return n;
