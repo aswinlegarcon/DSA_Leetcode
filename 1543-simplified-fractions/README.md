@@ -1,5 +1,6 @@
 <h2><a href="https://leetcode.com/problems/simplified-fractions">Simplified Fractions</a></h2> <img src='https://img.shields.io/badge/Difficulty-Medium-orange' alt='Difficulty: Medium' /><hr><p>Given an integer <code>n</code>, return <em>a list of all <strong>simplified</strong> fractions between </em><code>0</code><em> and </em><code>1</code><em> (exclusive) such that the denominator is less-than-or-equal-to </em><code>n</code>. You can return the answer in <strong>any order</strong>.</p>
 
+
 <p>&nbsp;</p>
 <p><strong class="example">Example 1:</strong></p>
 
@@ -30,3 +31,4 @@
 <ul>
 	<li><code>1 &lt;= n &lt;= 100</code></li>
 </ul>
+
