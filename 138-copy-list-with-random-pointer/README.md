@@ -16,6 +16,7 @@
 <p>Your code will <strong>only</strong> be given the <code>head</code> of the original linked list.</p>
 
 <p>&nbsp;</p>
+
 <p><strong class="example">Example 1:</strong></p>
 <img alt="" src="https://assets.leetcode.com/uploads/2019/12/18/e1.png" style="width: 700px; height: 142px;" />
 <pre>
