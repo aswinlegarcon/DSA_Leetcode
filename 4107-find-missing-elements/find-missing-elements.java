@@ -1,4 +1,5 @@
 class Solution {
+    
     public List<Integer> findMissingElements(int[] nums) {
         int n = nums.length;
         int min = Integer.MAX_VALUE;
@@ -18,4 +19,5 @@ class Solution {
         }
         return lst;
     }
+
 }
