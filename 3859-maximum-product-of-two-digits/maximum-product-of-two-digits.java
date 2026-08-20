@@ -1,4 +1,5 @@
 class Solution {
+
     public int maxProduct(int n) {
         int max = Integer.MIN_VALUE;
         int max2 = max;
@@ -18,4 +19,5 @@ class Solution {
         }
         return max*max2;
     }
+    
 }
