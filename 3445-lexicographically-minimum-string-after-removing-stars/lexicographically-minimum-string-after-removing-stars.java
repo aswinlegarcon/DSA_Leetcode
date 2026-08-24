@@ -1,4 +1,5 @@
 class Solution {
+
     public String clearStars(String s) {
         PriorityQueue<Character> pq = new PriorityQueue<>();
         int n = s.length();
@@ -30,4 +31,5 @@ class Solution {
         }
         return ans.toString();
     }
+    
 }
