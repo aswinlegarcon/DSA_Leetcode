@@ -1,7 +1,5 @@
 class Solution {
-    
     public int absDifference(int[] nums, int k) {
-        
         int smallSum = 0;
         int largeSum = 0;
         Arrays.sort(nums);
