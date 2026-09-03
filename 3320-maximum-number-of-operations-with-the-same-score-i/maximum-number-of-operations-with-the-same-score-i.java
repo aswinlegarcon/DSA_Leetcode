@@ -10,7 +10,6 @@ class Solution {
                 break;
             }
         }
-
         return operation;
     }
 }
