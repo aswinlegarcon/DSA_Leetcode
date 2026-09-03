@@ -1,6 +1,5 @@
 class Solution {
     public List<Integer> findKDistantIndices(int[] nums, int key, int k) {
-        
         int n = nums.length;
         List<Integer> lst = new ArrayList<>();
         for(int i=0;i<n;i++)
@@ -14,7 +13,6 @@ class Solution {
                 }
             }
         }
-        
         return lst;
     }
 }
