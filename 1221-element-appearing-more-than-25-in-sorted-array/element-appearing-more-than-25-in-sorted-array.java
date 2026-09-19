@@ -1,6 +1,5 @@
 class Solution {
     public int findSpecialInteger(int[] arr) {
-        
         int n = arr.length;
         int limit = (n/4)+1;
         int currNum = arr[0];
@@ -15,6 +14,5 @@ class Solution {
             if(currCount >= limit) return currNum;
         }
         return currNum;
-
     }
 }
