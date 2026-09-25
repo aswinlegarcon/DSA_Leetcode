@@ -1,5 +1,6 @@
 class Solution {
     public String reverseStr(String s, int k) {
+        
         int n = s.length();
         char[] arr = s.toCharArray();
         for(int i=0;i<n;i+=(2*k)){
@@ -17,5 +18,6 @@ class Solution {
             }
         }
         return new String(arr);
+
     }
 }
