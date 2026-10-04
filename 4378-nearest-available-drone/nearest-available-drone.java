@@ -1,5 +1,4 @@
 class Solution {
-    
     public int nearestDrone(int[][] drones, int[] target) {
         int min = Integer.MAX_VALUE;
         int ind = -1;
@@ -19,5 +18,4 @@ class Solution {
         }
         return ind;
     }
-
 }
