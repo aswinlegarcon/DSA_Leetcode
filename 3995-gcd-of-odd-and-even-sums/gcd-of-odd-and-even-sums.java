@@ -14,9 +14,7 @@ class Solution {
             sumEven += num;
             num += 2;
         }
-
         int gcd = getGcd(sumOdd,sumEven);
-
         return gcd;
     }
 
@@ -29,4 +27,5 @@ class Solution {
         }
         return a;
     }
+
 }
