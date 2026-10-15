@@ -1,4 +1,5 @@
 class Solution {
+
     public int finalPositionOfSnake(int n, List<String> commands) {
         int i = 0;
         int j = 0;
@@ -19,6 +20,6 @@ class Solution {
             }
         }
         return (i*n) + j;
-
     }
+    
 }
