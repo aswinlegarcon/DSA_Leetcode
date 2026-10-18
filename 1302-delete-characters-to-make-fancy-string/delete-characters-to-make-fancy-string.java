@@ -18,9 +18,7 @@ class Solution {
             i++;
             sb.append(c);
             
-
         }
         return sb.toString();
-
     }
 }
