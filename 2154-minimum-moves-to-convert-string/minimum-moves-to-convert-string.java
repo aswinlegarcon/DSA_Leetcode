@@ -3,7 +3,6 @@ class Solution {
         int steps = 0;
         int i = 0;
         int n = s.length();
-
         while (i < n) {
             if (s.charAt(i) == 'X') {
                 steps++;
@@ -12,7 +11,6 @@ class Solution {
                 i++;
             }
         }
-
         return steps;
     }
 }
