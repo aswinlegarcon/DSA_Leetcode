@@ -1,5 +1,6 @@
 class Solution {
     public int minimumMoves(String s) {
+        
         int steps = 0;
         int i = 0;
         int n = s.length();
@@ -12,5 +13,6 @@ class Solution {
             }
         }
         return steps;
+
     }
 }
