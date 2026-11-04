@@ -4,7 +4,6 @@ class Solution {
         int n = digits.length;
         for (int i = 0; i < n; i++) {
             if (digits[i] == 0) continue;
-
             for (int j = 0; j < n; j++) {
                 if (i == j) continue;
 
