@@ -1,4 +1,5 @@
 class Solution {
+    
     public int longestMonotonicSubarray(int[] nums) {
         int max = 1;
         int inc = 1;
@@ -24,4 +25,5 @@ class Solution {
         }
         return max;
     }
+
 }
