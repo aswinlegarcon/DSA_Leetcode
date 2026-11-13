@@ -20,7 +20,6 @@ class Solution {
         return result;
 
     }
-
     private boolean isSortedAndConsecutive(int[] nums,int ind,int k)
     {
         for(int i=ind+1;i<ind+k;i++)
@@ -32,8 +31,6 @@ class Solution {
         {
             if(nums[i]+1 != nums[i+1]) return false;
         }
-
         return true;
     }
-    
 }
