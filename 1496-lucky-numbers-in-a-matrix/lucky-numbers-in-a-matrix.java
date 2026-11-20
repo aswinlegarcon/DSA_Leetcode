@@ -1,5 +1,7 @@
 class Solution {
+    
     public List<Integer> luckyNumbers(int[][] matrix) {
+
         int n = matrix.length;
         int m = matrix[0].length;
         List<Integer> lst = new ArrayList<>();
@@ -26,5 +28,6 @@ class Solution {
             }
         }
         return lst;
+
     }
 }
