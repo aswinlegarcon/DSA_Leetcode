@@ -5,7 +5,6 @@ class ProductOfNumbers {
     public void add(int num) {
         lst.add(num);
     }
-
     public int getProduct(int k) {
         int n = lst.size(), prod = 1;
         for (int i = n - k; i < n; i++)
