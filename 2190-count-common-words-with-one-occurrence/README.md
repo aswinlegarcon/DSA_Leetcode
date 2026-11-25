@@ -36,5 +36,6 @@ Thus, there are 2 strings that appear exactly once in each of the two arrays.
 <ul>
 	<li><code>1 &lt;= words1.length, words2.length &lt;= 1000</code></li>
 	<li><code>1 &lt;= words1[i].length, words2[j].length &lt;= 30</code></li>
-	<li><code>words1[i]</code> and <code>words2[j]</code> consists only of lowercase English letters.</li>
+	<li><code>words1[i]</code> and <code>words2[j]</code> consists only of lowercase English letterss.</li>
+	
 </ul>
