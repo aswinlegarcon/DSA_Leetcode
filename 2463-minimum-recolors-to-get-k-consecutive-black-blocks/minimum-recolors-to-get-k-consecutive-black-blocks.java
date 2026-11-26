@@ -18,5 +18,6 @@ class Solution {
             m=Math.min(m,w);
         }
         return m;
+        
     }
 }
